@@ -1,0 +1,229 @@
+/*************************
+Coffee Chat
+*************************/
+
+.coffee-chat {
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    grid-template-areas: "img text";
+    column-gap: 3rem;
+    padding: 2rem 4rem;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+    overflow: hidden;
+    position: relative;
+}
+
+#coffee-with-person {
+    width: 700px;
+    margin-left: calc(100% - 700px);
+}
+
+#coffee-chat-prompt {
+    grid-area: text;
+}
+
+.coffee-chat h2 {
+    font-size: 3em;
+    margin-bottom: 0.5rem;
+}
+
+.coffee-chat h3 {
+    font-size: 2em;
+}
+
+#coffee-chat-prompt button {
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    background-color: transparent;
+    font-size: 1.5em;
+    border-radius: 100px;
+    margin-top: 2rem;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#coffee-chat-prompt  button:hover {
+    padding-right: 4rem;
+}
+
+#coffee-chat-prompt button::after {
+    content: ">>";
+    margin-left: 8px;
+    opacity: 0;
+    position: absolute;
+    transition: 0.25s;
+    transform: translateX(-4px);
+}
+
+#coffee-chat-prompt button:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes coffee-away {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-800px);
+    }
+}
+
+@keyframes coffee-prompt-fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/*************************
+Coffee Chat Form
+*************************/
+#coffee-bg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#coffee-bg {
+    width: 110vmax;
+    height: 110vmax;
+    border-radius: 50%;
+    background-color: #763b01;
+    border: 3vw solid #f1f2f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    box-sizing: content-box;
+    position: absolute;
+    transform: translateX(-100vw) rotate(450deg);
+}
+
+#coffee-bg::before {
+    content: "";
+    width: 25vw;
+    height: 12.5vw;
+    min-width: 250px;
+    min-height: 125px;
+    border-radius: 0 50px 50px 0;
+    background-color: #f1f2f6;
+    position: absolute;
+    right: 0;
+    margin-right: min(-25vw, -250px);
+}
+
+@keyframes coffee-bg-in {
+    from {
+        transform: translateX(-100vw) rotate(450deg);
+    }
+    to {
+        transform: translateX(0) rotate(-15deg);
+    }
+}
+
+#contact-form {
+    z-index: 2;
+    transform: rotate(15deg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "name email" "message message" "submit submit";
+    column-gap: 1rem;
+    row-gap: 1rem;
+    position: absolute;
+}
+
+#contact-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    font-size: 1.1rem;
+}
+
+#contact-form input, #contact-form textarea {
+    background-color: rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1em;
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    transition: outline 0.25s;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: 1px solid #ffffff;
+}
+
+.name-field {
+    grid-area: name;
+}
+
+.email-field {
+    grid-area: email;
+}
+
+.message-field {
+    grid-area: message;
+}
+
+.submit-contact-form {
+    grid-area: submit;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.25s;
+}
+
+.submit-contact-form:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+
+.message-field textarea {
+    height: 200px;
+    resize: none;
+}
+
+.coffee-float-container {
+    display: flex;
+    width: 95vmax;
+    animation: float-direction 20s ease-in-out infinite;
+}
+
+.coffee-float-person {
+    width: 25vw;
+    min-width: 250px;
+}
+
+@keyframes float-direction {
+    from {
+        transform: rotate(15deg);
+    }
+    33% {
+        transform: rotate(20deg);
+    }
+    66% {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(15deg);
+    }
+}

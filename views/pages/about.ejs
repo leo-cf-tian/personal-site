@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Leo Tian</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/about.css">
+</head>
+
+<body>
+
+    <%- include("../templates/header") %>
+
+        <section class="coffee-chat">
+            <img id="coffee-with-person" src="images/Coffee.svg">
+            <div id="coffee-chat-prompt">
+                <h2>Interested in knowing more about me?</h2>
+                <h3>I would love to have a coffee chat!</h3>
+                <button onclick="contactFormShow()">Contact Me</button>
+            </div>
+
+            <div id="coffee-bg-container">
+                <div id="coffee-bg">
+                    <form id="contact-form" autocomplete="off" onsubmit="submitContactForm(event)">
+                        <div class="name-field">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" maxlength="256" required />
+                        </div>
+                        <div class="email-field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="Email" maxlength="256" required />
+                        </div>
+                        <div class="message-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" type="text" maxlength="2000" required></textarea>
+                        </div>
+                        <button class="submit-contact-form" type="submit">Submit</button>
+                    </form>
+
+                    <div class="coffee-float-container">
+                        <img class="coffee-float-person" src="images/CoffeeFloat.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="javascripts/coffee.js"></script>
+</body>
+
+</html>
