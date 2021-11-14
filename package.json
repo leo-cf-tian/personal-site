@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "tsc && node dist/app.js",
-    "dev": "ts-node-dev app.ts"
+    "start": "node dist/app.js",
+    "dev": "ts-node-dev app.ts",
+    "postinstall": "tsc"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.5.0",
