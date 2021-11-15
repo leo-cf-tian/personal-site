@@ -18,15 +18,15 @@ router.post('/', upload.none(), async function (req, res, next) {
         text: message,
     }
 
-    const notification = {
-        to: email, // Change to your recipient
-        replyTo: "leo.cf.tian@gmail.com",
-        from: "leo.cf.tian.info@gmail.com",
-        subject: `Contact Request from ${name}`,
-        html: `
-            <h1>Hello! </h1>
-        `
-    }
+    // const notification = {
+    //     to: email, // Change to your recipient
+    //     replyTo: "leo.cf.tian@gmail.com",
+    //     from: "leo.cf.tian.info@gmail.com",
+    //     subject: `Contact Request from ${name}`,
+    //     html: `
+    //         <h1>Hello! </h1>
+    //     `
+    // }
 
     try {
         sgMail.send(msg);

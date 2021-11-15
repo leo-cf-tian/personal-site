@@ -1,6 +1,7 @@
 /*************************
 Landing Section
 *************************/
+
 .landing-section {
     height: 100vh;
     min-height: 600px;
@@ -210,6 +211,15 @@ Volunteer Sections
     position: relative;
 }
 
+@media screen and (max-width: 800px) {
+    .volunteer-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px auto;
+        grid-template-areas: "img" "text";
+        padding: 4rem 4rem;
+    }
+}
+
 .volunteer-section h1 {
     font-size: 3em;
 }
@@ -240,6 +250,14 @@ Xdhacks Decoration
     width: 100%;
 }
 
+@media screen and (max-width: 800px) {
+    .kurius-logo {
+        width: 300px;
+        margin: 0 auto 2rem auto;
+    }
+}
+
+
 /*************************
 Xdhacks Decoration
 *************************/
@@ -257,7 +275,7 @@ Xdhacks Decoration
 }
 
 #xdhacks-hexagon-circle {
-    --gap: 30px;
+    --gap: 3vmax;
     width: 40vmax;
     height: 38.4vmax;
     display: inline-grid;
@@ -320,6 +338,20 @@ Xdhacks Decoration
     grid-column: 4 / span 2;
     grid-row: 5 / span 3;
     fill: #ffd049;
+}
+
+
+@media screen and (max-width: 800px) {
+    .xdhacks-hexagon-contianer {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    #xdhacks-hexagon-circle {
+        --gap: 22.5px;
+        width: 300px;
+        height: 288px;
+    }
 }
 
 /*************************
