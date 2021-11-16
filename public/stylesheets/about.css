@@ -1,4 +1,39 @@
 /*************************
+About Me
+*************************/
+.about-me {
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+}
+
+.about-me h3 {
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+}
+
+.about-me h3:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.about-me p, .about-me ul {
+    font-size: 1.25em;
+}
+
+.about-me ul li {
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    .about-me {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        row-gap: 2rem;
+    }
+}
+
+/*************************
 Coffee Chat
 *************************/
 
@@ -9,7 +44,8 @@ Coffee Chat
     column-gap: 3rem;
     padding: 2rem 4rem;
     align-items: center;
-    flex-grow: 1;
+    height: 90vh;
+    min-height: 600px;
     overflow: hidden;
     position: relative;
 }
