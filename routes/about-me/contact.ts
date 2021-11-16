@@ -29,7 +29,7 @@ router.post('/', upload.none(), async function (req, res, next) {
     // }
 
     try {
-        // sgMail.send(msg);
+        sgMail.send(msg);
         res.status(200);
         res.send("success!");
     }
