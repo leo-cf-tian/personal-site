@@ -1,0 +1,12 @@
+/*************************
+Resume Pdf
+*************************/
+
+iframe {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 2rem 2rem 2rem;
+    border: none;
+    flex-grow: 1;
+}

@@ -33,7 +33,16 @@ function submitContactForm(e) {
     })
     .then(data => {
         if (data.ok) {
-
+            contactForm.outerHTML = `
+            <div class="form-confirmation">
+                <h2>
+                    Email Successfully Sent!
+                </h2>
+                <p>
+                    I usually reply in 3-4 business days
+                </p>
+            </div>
+            `
         }
     })
 }

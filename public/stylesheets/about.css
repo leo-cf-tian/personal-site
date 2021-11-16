@@ -9,7 +9,7 @@ Coffee Chat
     column-gap: 3rem;
     padding: 2rem 4rem;
     align-items: center;
-    min-height: calc(100vh - 160px);
+    flex-grow: 1;
     overflow: hidden;
     position: relative;
 }
@@ -226,4 +226,13 @@ Coffee Chat Form
     to {
         transform: rotate(15deg);
     }
+}
+
+.form-confirmation {
+    z-index: 2;
+    transform: rotate(15deg);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

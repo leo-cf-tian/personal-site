@@ -29,6 +29,9 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /*************************
@@ -81,7 +84,7 @@ Header
     margin: 0 1.5rem;
 }
 
-.main-nav ul li a, button {
+a, button, input, textarea {
     text-decoration: none;
     color: var(--text-color);
 }
