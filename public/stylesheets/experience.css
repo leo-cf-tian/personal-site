@@ -201,7 +201,7 @@ Volunteer Sections
 
 .volunteer-section {
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) 3fr;
+    grid-template-columns: minmax(300px, 1fr) 2fr;
     grid-template-areas: "img text";
     column-gap: 3rem;
     padding: 2rem 4rem;
@@ -222,136 +222,30 @@ Volunteer Sections
 
 .volunteer-section h1 {
     font-size: 3em;
+    margin-bottom: 1rem;
 }
 
-.volunteer-section p {
+.volunteer-section ul {
     margin-top: 1rem;
     font-size: 1.25em;
 }
 
-.kurius-section {
-    background-color: #000000;
+.volunteer-section li {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.xdhacks-section {
-    background-color: #fafafa;
-    color: #1d1f2e;
+.starlight-river-section {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url("/images/VitricSands.png");
+    background-size: cover;
+    backdrop-filter: brightness(0.5);
 }
 
+.starlight-river-section iframe {
+    width: 100%;
+}
 .intention-section {
     background-color: #130f26;
-}
-
-/*************************
-Xdhacks Decoration
-*************************/
-
-.kurius-logo {
-    width: 100%;
-}
-
-@media screen and (max-width: 800px) {
-    .kurius-logo {
-        width: 300px;
-        margin: 0 auto 2rem auto;
-    }
-}
-
-
-/*************************
-Xdhacks Decoration
-*************************/
-
-.xdhacks-hexagon-contianer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20vmax;
-}
-
-.xdhacks-logo {
-    width: 8vmax;
-    height: auto;
-}
-
-#xdhacks-hexagon-circle {
-    --gap: 3vmax;
-    width: 40vmax;
-    height: 38.4vmax;
-    display: inline-grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr 2fr) 1fr;
-    grid-gap: calc(var(--gap) * 1.1) var(--gap);
-    transform: rotate(0deg);
-    transition: transform 1s;
-    position: absolute;
-}
-
-.hexagon-container {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.hexagon {
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-}
-
-#hex-1 {
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 3;
-    fill: #7f7ca1;
-}
-
-#hex-2 {
-    grid-column: 4 / span 2;
-    grid-row: 1 / span 3;
-    fill: #7466aa;
-}
-
-#hex-3 {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 3;
-    fill: #52bfc9;
-}
-
-#hex-4 {
-    grid-column: 5 / span 2;
-    grid-row: 3 / span 3;
-    fill: #55b3fd;
-}
-
-#hex-5 {
-    grid-column: 2 / span 2;
-    grid-row: 5 / span 3;
-    fill: #dc5980;
-}
-
-#hex-6 {
-    grid-column: 4 / span 2;
-    grid-row: 5 / span 3;
-    fill: #ffd049;
-}
-
-
-@media screen and (max-width: 800px) {
-    .xdhacks-hexagon-contianer {
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-    
-    #xdhacks-hexagon-circle {
-        --gap: 22.5px;
-        width: 300px;
-        height: 288px;
-    }
 }
 
 /*************************

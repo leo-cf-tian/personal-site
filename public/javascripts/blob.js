@@ -224,7 +224,7 @@ const path = document.getElementById("blob");
 const root = document.documentElement;
 
 let hueNoiseOffset = 0;
-let noiseStep = 0.005;
+let noiseStep = 0.001;
 
 const simplex = new SimplexNoise();
 

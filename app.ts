@@ -31,8 +31,13 @@ const main = async () => {
         useRoutes(route) // If route is an array (folder), then read into it
       }
       else {
-        app.use(`/${route.name}`, route.router) // If route, then use it
-        console.log(route.name)
+        if (route?.router) {
+          app.use(`/${route.name}`, route.router) // If route, then use it
+          console.log(route.name)
+        }
+        else {
+          console.log(`Route "${route.name}" is unused`)
+        }
       }
     }
   }

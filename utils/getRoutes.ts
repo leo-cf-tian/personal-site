@@ -35,7 +35,7 @@ const getRoutes = async (): Promise<NestedArray<Route>> => {
     const files = fs.readdirSync(path.join(__dirname, "..", "routes"))
         .filter((route: String) => !route.includes('.map')) // Filter out .map files
 
-    return Promise.all(await readDirRec(files))
+    return readDirRec(files)
 }
 
 export default getRoutes;

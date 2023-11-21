@@ -53,19 +53,3 @@ setInterval(() => {
         }
     }
 }, 1000)
-
-
-//Skill Bar Props
-const skillbars = document.getElementsByClassName("skill-bar-filled");
-
-const observer = new IntersectionObserver(skillbars => {
-    skillbars.forEach(skillbar => {
-        if (skillbar.isIntersecting) {
-            skillbar.target.style.width = `${skillbar.target.dataset.skillPercentage}%`;
-        }
-    });
-});
-
-for (let i = 0; i < skillbars.length; i++) {
-    observer.observe(skillbars[i]);
-}
